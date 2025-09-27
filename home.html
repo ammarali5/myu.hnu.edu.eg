@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="images/png" href="images/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyU</title>
+  <link rel="stylesheet" crossorigin href="index.css" />
+  <link href="https://cdn.materialdesignicons.com/7.2.96/css/materialdesignicons.min.css" rel="stylesheet" />
+  <style id="vuetify-theme-stylesheet" type="text/css">
+    :root {
+      --v-theme-background: 255, 255, 255;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 255, 255, 255;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-bright: 255, 255, 255;
+      --v-theme-surface-bright-overlay-multiplier: 1;
+      --v-theme-surface-light: 238, 238, 238;
+      --v-theme-surface-light-overlay-multiplier: 1;
+      --v-theme-surface-variant: 66, 66, 66;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 238, 238, 238;
+      --v-theme-primary: 24, 103, 192;
+      --v-theme-primary-overlay-multiplier: 2;
+      --v-theme-primary-darken-1: 31, 85, 146;
+      --v-theme-primary-darken-1-overlay-multiplier: 2;
+      --v-theme-secondary: 72, 169, 166;
+      --v-theme-secondary-overlay-multiplier: 1;
+      --v-theme-secondary-darken-1: 1, 135, 134;
+      --v-theme-secondary-darken-1-overlay-multiplier: 1;
+      --v-theme-error: 176, 0, 32;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33, 150, 243;
+      --v-theme-info-overlay-multiplier: 1;
+      --v-theme-success: 76, 175, 80;
+      --v-theme-success-overlay-multiplier: 1;
+      --v-theme-warning: 251, 140, 0;
+      --v-theme-warning-overlay-multiplier: 1;
+      --v-theme-on-background: 0, 0, 0;
+      --v-theme-on-surface: 0, 0, 0;
+      --v-theme-on-surface-bright: 0, 0, 0;
+      --v-theme-on-surface-light: 0, 0, 0;
+      --v-theme-on-primary: 255, 255, 255;
+      --v-theme-on-primary-darken-1: 255, 255, 255;
+      --v-theme-on-secondary: 255, 255, 255;
+      --v-theme-on-secondary-darken-1: 255, 255, 255;
+      --v-theme-on-error: 255, 255, 255;
+      --v-theme-on-info: 255, 255, 255;
+      --v-theme-on-success: 255, 255, 255;
+      --v-theme-on-warning: 255, 255, 255;
+      --v-border-color: 0, 0, 0;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 0.87;
+      --v-medium-emphasis-opacity: 0.6;
+      --v-disabled-opacity: 0.38;
+      --v-idle-opacity: 0.04;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.12;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 33, 37, 41;
+      --v-theme-on-kbd: 255, 255, 255;
+      --v-theme-code: 245, 245, 245;
+      --v-theme-on-code: 0, 0, 0;
+    }
+
+    .v-theme--light {
+      color-scheme: normal;
+      --v-theme-background: 255, 255, 255;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 255, 255, 255;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-bright: 255, 255, 255;
+      --v-theme-surface-bright-overlay-multiplier: 1;
+      --v-theme-surface-light: 238, 238, 238;
+      --v-theme-surface-light-overlay-multiplier: 1;
+      --v-theme-surface-variant: 66, 66, 66;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 238, 238, 238;
+      --v-theme-primary: 24, 103, 192;
+      --v-theme-primary-overlay-multiplier: 2;
+      --v-theme-primary-darken-1: 31, 85, 146;
+      --v-theme-primary-darken-1-overlay-multiplier: 2;
+      --v-theme-secondary: 72, 169, 166;
+      --v-theme-secondary-overlay-multiplier: 1;
+      --v-theme-secondary-darken-1: 1, 135, 134;
+      --v-theme-secondary-darken-1-overlay-multiplier: 1;
+      --v-theme-error: 176, 0, 32;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33, 150, 243;
+      --v-theme-info-overlay-multiplier: 1;
+      --v-theme-success: 76, 175, 80;
+      --v-theme-success-overlay-multiplier: 1;
+      --v-theme-warning: 251, 140, 0;
+      --v-theme-warning-overlay-multiplier: 1;
+      --v-theme-on-background: 0, 0, 0;
+      --v-theme-on-surface: 0, 0, 0;
+      --v-theme-on-surface-bright: 0, 0, 0;
+      --v-theme-on-surface-light: 0, 0, 0;
+      --v-theme-on-primary: 255, 255, 255;
+      --v-theme-on-primary-darken-1: 255, 255, 255;
+      --v-theme-on-secondary: 255, 255, 255;
+      --v-theme-on-secondary-darken-1: 255, 255, 255;
+      --v-theme-on-error: 255, 255, 255;
+      --v-theme-on-info: 255, 255, 255;
+      --v-theme-on-success: 255, 255, 255;
+      --v-theme-on-warning: 255, 255, 255;
+      --v-border-color: 0, 0, 0;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 0.87;
+      --v-medium-emphasis-opacity: 0.6;
+      --v-disabled-opacity: 0.38;
+      --v-idle-opacity: 0.04;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.12;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 33, 37, 41;
+      --v-theme-on-kbd: 255, 255, 255;
+      --v-theme-code: 245, 245, 245;
+      --v-theme-on-code: 0, 0, 0;
+    }
+
+    .v-theme--dark {
+      color-scheme: dark;
+      --v-theme-background: 18, 18, 18;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 33, 33, 33;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-bright: 204, 191, 214;
+      --v-theme-surface-bright-overlay-multiplier: 2;
+      --v-theme-surface-light: 66, 66, 66;
+      --v-theme-surface-light-overlay-multiplier: 1;
+      --v-theme-surface-variant: 200, 200, 200;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 0, 0, 0;
+      --v-theme-primary: 33, 150, 243;
+      --v-theme-primary-overlay-multiplier: 2;
+      --v-theme-primary-darken-1: 39, 124, 193;
+      --v-theme-primary-darken-1-overlay-multiplier: 2;
+      --v-theme-secondary: 84, 182, 178;
+      --v-theme-secondary-overlay-multiplier: 2;
+      --v-theme-secondary-darken-1: 72, 169, 166;
+      --v-theme-secondary-darken-1-overlay-multiplier: 2;
+      --v-theme-error: 207, 102, 121;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33, 150, 243;
+      --v-theme-info-overlay-multiplier: 2;
+      --v-theme-success: 76, 175, 80;
+      --v-theme-success-overlay-multiplier: 2;
+      --v-theme-warning: 251, 140, 0;
+      --v-theme-warning-overlay-multiplier: 2;
+      --v-theme-on-background: 255, 255, 255;
+      --v-theme-on-surface: 255, 255, 255;
+      --v-theme-on-surface-bright: 0, 0, 0;
+      --v-theme-on-surface-light: 255, 255, 255;
+      --v-theme-on-primary: 255, 255, 255;
+      --v-theme-on-primary-darken-1: 255, 255, 255;
+      --v-theme-on-secondary: 255, 255, 255;
+      --v-theme-on-secondary-darken-1: 255, 255, 255;
+      --v-theme-on-error: 255, 255, 255;
+      --v-theme-on-info: 255, 255, 255;
+      --v-theme-on-success: 255, 255, 255;
+      --v-theme-on-warning: 255, 255, 255;
+      --v-border-color: 255, 255, 255;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 1;
+      --v-medium-emphasis-opacity: 0.7;
+      --v-disabled-opacity: 0.5;
+      --v-idle-opacity: 0.1;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.16;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 33, 37, 41;
+      --v-theme-on-kbd: 255, 255, 255;
+      --v-theme-code: 52, 52, 52;
+      --v-theme-on-code: 204, 204, 204;
+    }
+
+    .bg-background {
+      --v-theme-overlay-multiplier: var(--v-theme-background-overlay-multiplier);
+      background-color: rgb(var(--v-theme-background)) !important;
+      color: rgb(var(--v-theme-on-background)) !important;
+    }
+
+    .bg-surface {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-overlay-multiplier);
+      background-color: rgb(var(--v-theme-surface)) !important;
+      color: rgb(var(--v-theme-on-surface)) !important;
+    }
+
+    .bg-surface-bright {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-bright-overlay-multiplier);
+      background-color: rgb(var(--v-theme-surface-bright)) !important;
+      color: rgb(var(--v-theme-on-surface-bright)) !important;
+    }
+
+    .bg-surface-light {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-light-overlay-multiplier);
+      background-color: rgb(var(--v-theme-surface-light)) !important;
+      color: rgb(var(--v-theme-on-surface-light)) !important;
+    }
+
+    .bg-surface-variant {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-variant-overlay-multiplier);
+      background-color: rgb(var(--v-theme-surface-variant)) !important;
+      color: rgb(var(--v-theme-on-surface-variant)) !important;
+    }
+
+    .bg-primary {
+      --v-theme-overlay-multiplier: var(--v-theme-primary-overlay-multiplier);
+      background-color: rgb(var(--v-theme-primary)) !important;
+      color: rgb(var(--v-theme-on-primary)) !important;
+    }
+
+    .bg-primary-darken-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-primary-darken-1-overlay-multiplier);
+      background-color: rgb(var(--v-theme-primary-darken-1)) !important;
+      color: rgb(var(--v-theme-on-primary-darken-1)) !important;
+    }
+
+    .bg-secondary {
+      --v-theme-overlay-multiplier: var(--v-theme-secondary-overlay-multiplier);
+      background-color: rgb(var(--v-theme-secondary)) !important;
+      color: rgb(var(--v-theme-on-secondary)) !important;
+    }
+
+    .bg-secondary-darken-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-secondary-darken-1-overlay-multiplier);
+      background-color: rgb(var(--v-theme-secondary-darken-1)) !important;
+      color: rgb(var(--v-theme-on-secondary-darken-1)) !important;
+    }
+
+    .bg-error {
+      --v-theme-overlay-multiplier: var(--v-theme-error-overlay-multiplier);
+      background-color: rgb(var(--v-theme-error)) !important;
+      color: rgb(var(--v-theme-on-error)) !important;
+    }
+
+    .bg-info {
+      --v-theme-overlay-multiplier: var(--v-theme-info-overlay-multiplier);
+      background-color: rgb(var(--v-theme-info)) !important;
+      color: rgb(var(--v-theme-on-info)) !important;
+    }
+
+    .bg-success {
+      --v-theme-overlay-multiplier: var(--v-theme-success-overlay-multiplier);
+      background-color: rgb(var(--v-theme-success)) !important;
+      color: rgb(var(--v-theme-on-success)) !important;
+    }
+
+    .bg-warning {
+      --v-theme-overlay-multiplier: var(--v-theme-warning-overlay-multiplier);
+      background-color: rgb(var(--v-theme-warning)) !important;
+      color: rgb(var(--v-theme-on-warning)) !important;
+    }
+
+    .text-background {
+      color: rgb(var(--v-theme-background)) !important;
+    }
+
+    .border-background {
+      --v-border-color: var(--v-theme-background);
+    }
+
+    .text-surface {
+      color: rgb(var(--v-theme-surface)) !important;
+    }
+
+    .border-surface {
+      --v-border-color: var(--v-theme-surface);
+    }
+
+    .text-surface-bright {
+      color: rgb(var(--v-theme-surface-bright)) !important;
+    }
+
+    .border-surface-bright {
+      --v-border-color: var(--v-theme-surface-bright);
+    }
+
+    .text-surface-light {
+      color: rgb(var(--v-theme-surface-light)) !important;
+    }
+
+    .border-surface-light {
+      --v-border-color: var(--v-theme-surface-light);
+    }
+
+    .text-surface-variant {
+      color: rgb(var(--v-theme-surface-variant)) !important;
+    }
+
+    .border-surface-variant {
+      --v-border-color: var(--v-theme-surface-variant);
+    }
+
+    .on-surface-variant {
+      color: rgb(var(--v-theme-on-surface-variant)) !important;
+    }
+
+    .text-primary {
+      color: rgb(var(--v-theme-primary)) !important;
+    }
+
+    .border-primary {
+      --v-border-color: var(--v-theme-primary);
+    }
+
+    .text-primary-darken-1 {
+      color: rgb(var(--v-theme-primary-darken-1)) !important;
+    }
+
+    .border-primary-darken-1 {
+      --v-border-color: var(--v-theme-primary-darken-1);
+    }
+
+    .text-secondary {
+      color: rgb(var(--v-theme-secondary)) !important;
+    }
+
+    .border-secondary {
+      --v-border-color: var(--v-theme-secondary);
+    }
+
+    .text-secondary-darken-1 {
+      color: rgb(var(--v-theme-secondary-darken-1)) !important;
+    }
+
+    .border-secondary-darken-1 {
+      --v-border-color: var(--v-theme-secondary-darken-1);
+    }
+
+    .text-error {
+      color: rgb(var(--v-theme-error)) !important;
+    }
+
+    .border-error {
+      --v-border-color: var(--v-theme-error);
+    }
+
+    .text-info {
+      color: rgb(var(--v-theme-info)) !important;
+    }
+
+    .border-info {
+      --v-border-color: var(--v-theme-info);
+    }
+
+    .text-success {
+      color: rgb(var(--v-theme-success)) !important;
+    }
+
+    .border-success {
+      --v-border-color: var(--v-theme-success);
+    }
+
+    .text-warning {
+      color: rgb(var(--v-theme-warning)) !important;
+    }
+
+    .border-warning {
+      --v-border-color: var(--v-theme-warning);
+    }
+
+    .on-background {
+      color: rgb(var(--v-theme-on-background)) !important;
+    }
+
+    .on-surface {
+      color: rgb(var(--v-theme-on-surface)) !important;
+    }
+
+    .on-surface-bright {
+      color: rgb(var(--v-theme-on-surface-bright)) !important;
+    }
+
+    .on-surface-light {
+      color: rgb(var(--v-theme-on-surface-light)) !important;
+    }
+
+    .on-primary {
+      color: rgb(var(--v-theme-on-primary)) !important;
+    }
+
+    .on-primary-darken-1 {
+      color: rgb(var(--v-theme-on-primary-darken-1)) !important;
+    }
+
+    .on-secondary {
+      color: rgb(var(--v-theme-on-secondary)) !important;
+    }
+
+    .on-secondary-darken-1 {
+      color: rgb(var(--v-theme-on-secondary-darken-1)) !important;
+    }
+
+    .on-error {
+      color: rgb(var(--v-theme-on-error)) !important;
+    }
+
+    .on-info {
+      color: rgb(var(--v-theme-on-info)) !important;
+    }
+
+    .on-success {
+      color: rgb(var(--v-theme-on-success)) !important;
+    }
+
+    .on-warning {
+      color: rgb(var(--v-theme-on-warning)) !important;
+    }
+  </style>
+  <script type="module" crossorigin src="home.js"></script>
+</head>
+
+<body>
+  <div id="app" data-v-app="">
+    <div data-v-7a96a3fc="" class="v-responsive border rounded">
+      <div class="v-responsive__sizer"></div>
+      <!---->
+      <div class="v-responsive__content">
+        <div data-v-7a96a3fc="" class="v-application v-theme--light v-layout v-layout--full-height v-locale--is-ltr">
+          <div class="v-application__wrap">
+            <header data-v-7a96a3fc=""
+              class="v-toolbar v-toolbar--density-default v-theme--light v-locale--is-ltr v-app-bar" style="
+                  top: 0px;
+                  z-index: 1006;
+                  transform: translateY(0px);
+                  position: fixed;
+                  left: 0px;
+                  width: calc(100% + 0px);
+                ">
+              <!---->
+              <div class="v-toolbar__content" style="height: 64px">
+                <!----><!----><button data-v-7a96a3fc="" type="button"
+                  class="v-btn v-btn--icon v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text">
+                  <span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!----><span
+                    class="v-btn__content" data-no-activator=""><i
+                      class="mdi-menu mdi v-icon notranslate v-theme--light v-icon--size-default"
+                      aria-hidden="true"></i></span><!----><!---->
+                </button>
+                <div data-v-7a96a3fc="" class="v-toolbar-title ml-2">
+                  <div class="v-toolbar-title__placeholder">
+                    <!---->my HNU
+                  </div>
+                </div>
+                <div data-v-7a96a3fc="" class="v-spacer"></div>
+                <div data-v-7a96a3fc="" class="mr-4 text-body-1 font-weight-medium">
+                  942230211, محمد هشام محمد فوزى عبدالله
+                </div>
+                <button data-v-7a96a3fc="" type="button"
+                  class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text"
+                  id="log_out">
+                  <span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><span
+                    class="v-btn__prepend"><i
+                      class="mdi-logout mdi v-icon notranslate v-theme--light v-icon--size-default"
+                      aria-hidden="true"></i></span><span class="v-btn__content"
+                    data-no-activator="">Logout</span><!----><!----></button><!---->
+              </div>
+              <!---->
+            </header>
+            <nav class="v-navigation-drawer v-navigation-drawer--left v-theme--light" data-v-7a96a3fc="" style="
+                  left: 0px;
+                  z-index: 1004;
+                  transform: translateX(-256px);
+                  position: fixed;
+                  height: calc(100% - 64px);
+                  top: 64px;
+                  bottom: 0px;
+                  width: 256px;
+                ">
+              <!----><!---->
+              <div class="v-navigation-drawer__content">
+                <div data-v-7a96a3fc=""
+                  class="v-list v-theme--light bg-transparent v-list--density-default v-list--one-line" tabindex="0"
+                  role="listbox">
+                  <a id="home-link" data-v-7a96a3fc=""
+                    class="v-list-item v-list-item--link v-theme--light v-list-item--density-default v-list-item--one-line rounded-0 v-list-item--variant-text"
+                    tabindex="-2" href="#" router=""><span class="v-list-item__overlay"></span><span
+                      class="v-list-item__underlay"></span><!---->
+                    <div class="v-list-item__content" data-no-activator="">
+                      <div class="v-list-item-title">🏠 Homee</div>
+                      <!----><!---->
+                    </div>
+                    <!---->
+                  </a><a id="payments-link" data-v-7a96a3fc=""
+                    class="v-list-item v-list-item--link v-theme--light v-list-item--density-default v-list-item--one-line rounded-0 v-list-item--variant-text"
+                    tabindex="-2" href="#" router=""><span class="v-list-item__overlay"></span><span
+                      class="v-list-item__underlay"></span><!---->
+                    <div class="v-list-item__content" data-no-activator="">
+                      <div class="v-list-item-title">💳 Online Payments</div>
+                      <!----><!---->
+                    </div>
+                    <!---->
+                  </a>
+                </div>
+              </div>
+              <!---->
+            </nav>
+            <!---->
+            <main id="home-section" data-v-7a96a3fc="" class="v-main" style="
+                  --v-layout-left: 0px;
+                  --v-layout-right: 0px;
+                  --v-layout-top: 64px;
+                  --v-layout-bottom: 0px;
+                ">
+              <div data-v-7a96a3fc="" class="v-container v-locale--is-ltr">
+                <div data-v-7a96a3fc="">
+                  <h2>Dashboard</h2>
+                  <div data-v-a11c5244="" class="v-container v-locale--is-ltr">
+                    <h2 data-v-a11c5244="" class="text-h5 mb-4">
+                      📊 Final Grades
+                    </h2>
+                    <div data-v-a11c5244="">
+                      <div data-v-a11c5244="" class="mb-8">
+                        <h3 data-v-a11c5244="" class="text-h6 mb-2">
+                          2024 - SPRING
+                        </h3>
+                        <div data-v-a11c5244="" class="v-table v-theme--light v-table--density-default">
+                          <!---->
+                          <div class="v-table__wrapper">
+                            <table>
+                              <thead data-v-a11c5244="">
+                                <tr data-v-a11c5244="">
+                                  <th data-v-a11c5244="">Subject</th>
+                                  <th data-v-a11c5244="">Credit Hours</th>
+                                  <th data-v-a11c5244="">Marks</th>
+                                  <th data-v-a11c5244="">Points</th>
+                                  <th data-v-a11c5244="">Grade</th>
+                                  <th data-v-a11c5244="">Comment</th>
+                                </tr>
+                              </thead>
+                              <tbody data-v-a11c5244="">
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    ETHS15-Basic life support
+                                  </td>
+                                  <td data-v-a11c5244="">1</td>
+                                  <td data-v-a11c5244="">30 / 50</td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">D</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    TL216-Hematology for technologists (1)
+                                  </td>
+                                  <td data-v-a11c5244="">4</td>
+                                  <td data-v-a11c5244="">165 / 200</td>
+                                  <td data-v-a11c5244="">13.60</td>
+                                  <td data-v-a11c5244="">B+</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    TL217-Systematic physiology for
+                                    technologists
+                                  </td>
+                                  <td data-v-a11c5244="">4</td>
+                                  <td data-v-a11c5244="">150.50 / 200</td>
+                                  <td data-v-a11c5244="">12</td>
+                                  <td data-v-a11c5244="">B-</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    TL218-General biology for technologists
+                                  </td>
+                                  <td data-v-a11c5244="">3</td>
+                                  <td data-v-a11c5244="">120.50 / 150</td>
+                                  <td data-v-a11c5244="">9.60</td>
+                                  <td data-v-a11c5244="">B</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    TL215-Molecular biology for technologists
+                                  </td>
+                                  <td data-v-a11c5244="">4</td>
+                                  <td data-v-a11c5244="">158 / 200</td>
+                                  <td data-v-a11c5244="">12.80</td>
+                                  <td data-v-a11c5244="">B</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <!---->
+                        </div>
+                      </div>
+                      <div data-v-a11c5244="" class="mb-8">
+                        <h3 data-v-a11c5244="" class="text-h6 mb-2">
+                          2024 - FALL
+                        </h3>
+                        <div data-v-a11c5244="" class="v-table v-theme--light v-table--density-default">
+                          <!---->
+                          <div class="v-table__wrapper">
+                            <table>
+                              <thead data-v-a11c5244="">
+                                <tr data-v-a11c5244="">
+                                  <th data-v-a11c5244="">Subject</th>
+                                  <th data-v-a11c5244="">Credit Hours</th>
+                                  <th data-v-a11c5244="">Marks</th>
+                                  <th data-v-a11c5244="">Points</th>
+                                  <th data-v-a11c5244="">Grade</th>
+                                  <th data-v-a11c5244="">Comment</th>
+                                </tr>
+                              </thead>
+                              <tbody data-v-a11c5244="">
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    THS2010-Mechatronic engineering
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">74 / 100</td>
+                                  <td data-v-a11c5244="">5.60</td>
+                                  <td data-v-a11c5244="">C+</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    TL201-Biochemistry for technologists
+                                  </td>
+                                  <td data-v-a11c5244="">4</td>
+                                  <td data-v-a11c5244="">156 / 200</td>
+                                  <td data-v-a11c5244="">12.80</td>
+                                  <td data-v-a11c5244="">B</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    TL202-Parasitology for technologists
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">82 / 100</td>
+                                  <td data-v-a11c5244="">6.40</td>
+                                  <td data-v-a11c5244="">B</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    TL203-Bacteriology for technologists
+                                  </td>
+                                  <td data-v-a11c5244="">4</td>
+                                  <td data-v-a11c5244="">160.50 / 200</td>
+                                  <td data-v-a11c5244="">12.80</td>
+                                  <td data-v-a11c5244="">B</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    TL204-Histology for laboratory for
+                                    technologists
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">71 / 100</td>
+                                  <td data-v-a11c5244="">5.20</td>
+                                  <td data-v-a11c5244="">C</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    UN5-Foundation of digital technology
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">85 / 100</td>
+                                  <td data-v-a11c5244="">7.20</td>
+                                  <td data-v-a11c5244="">A-</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    UN6-English language 3
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">71.50 / 100</td>
+                                  <td data-v-a11c5244="">5.20</td>
+                                  <td data-v-a11c5244="">C</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <!---->
+                        </div>
+                      </div>
+                      <div data-v-a11c5244="" class="mb-8">
+                        <h3 data-v-a11c5244="" class="text-h6 mb-2">
+                          2023 - SPRING
+                        </h3>
+                        <div data-v-a11c5244="" class="v-table v-theme--light v-table--density-default">
+                          <!---->
+                          <div class="v-table__wrapper">
+                            <table>
+                              <thead data-v-a11c5244="">
+                                <tr data-v-a11c5244="">
+                                  <th data-v-a11c5244="">Subject</th>
+                                  <th data-v-a11c5244="">Credit Hours</th>
+                                  <th data-v-a11c5244="">Marks</th>
+                                  <th data-v-a11c5244="">Points</th>
+                                  <th data-v-a11c5244="">Grade</th>
+                                  <th data-v-a11c5244="">Comment</th>
+                                </tr>
+                              </thead>
+                              <tbody data-v-a11c5244="">
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    THS1110-Professional ethics
+                                  </td>
+                                  <td data-v-a11c5244="">1</td>
+                                  <td data-v-a11c5244="">50 / 50</td>
+                                  <td data-v-a11c5244="">4</td>
+                                  <td data-v-a11c5244="">A+</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    THS115-Electronic circuits &amp; devices
+                                  </td>
+                                  <td data-v-a11c5244="">3</td>
+                                  <td data-v-a11c5244="">113 / 150</td>
+                                  <td data-v-a11c5244="">9</td>
+                                  <td data-v-a11c5244="">B-</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    THS116-General anatomy &amp; histology for
+                                    technologists
+                                  </td>
+                                  <td data-v-a11c5244="">3</td>
+                                  <td data-v-a11c5244="">119 / 150</td>
+                                  <td data-v-a11c5244="">9.60</td>
+                                  <td data-v-a11c5244="">B</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    THS118-General Microbiology
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">80 / 100</td>
+                                  <td data-v-a11c5244="">6.40</td>
+                                  <td data-v-a11c5244="">B</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    THS119-General Chemistry
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">70 / 100</td>
+                                  <td data-v-a11c5244="">5.20</td>
+                                  <td data-v-a11c5244="">C</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    UN114-Academic reading &amp; writing (2)
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">78 / 100</td>
+                                  <td data-v-a11c5244="">6.40</td>
+                                  <td data-v-a11c5244="">B</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    UN30-Social Issues
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">50 / 50</td>
+                                  <td data-v-a11c5244="">—</td>
+                                  <td data-v-a11c5244="">P</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    THS117-General physiology for
+                                    technologists
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">69.50 / 100</td>
+                                  <td data-v-a11c5244="">5.20</td>
+                                  <td data-v-a11c5244="">C</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <!---->
+                        </div>
+                      </div>
+                      <div data-v-a11c5244="" class="mb-8">
+                        <h3 data-v-a11c5244="" class="text-h6 mb-2">
+                          2023 - FALL
+                        </h3>
+                        <div data-v-a11c5244="" class="v-table v-theme--light v-table--density-default">
+                          <!---->
+                          <div class="v-table__wrapper">
+                            <table>
+                              <thead data-v-a11c5244="">
+                                <tr data-v-a11c5244="">
+                                  <th data-v-a11c5244="">Subject</th>
+                                  <th data-v-a11c5244="">Credit Hours</th>
+                                  <th data-v-a11c5244="">Marks</th>
+                                  <th data-v-a11c5244="">Points</th>
+                                  <th data-v-a11c5244="">Grade</th>
+                                  <th data-v-a11c5244="">Comment</th>
+                                </tr>
+                              </thead>
+                              <tbody data-v-a11c5244="">
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    THS101-Basic physics
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">67 / 100</td>
+                                  <td data-v-a11c5244="">4.80</td>
+                                  <td data-v-a11c5244="">C-</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    THS102-Mathematics
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">78 / 100</td>
+                                  <td data-v-a11c5244="">6.40</td>
+                                  <td data-v-a11c5244="">B</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    THS103-Introduction to electrical
+                                    engineering
+                                  </td>
+                                  <td data-v-a11c5244="">3</td>
+                                  <td data-v-a11c5244="">108 / 150</td>
+                                  <td data-v-a11c5244="">7.80</td>
+                                  <td data-v-a11c5244="">C</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">THS104-Mechanics</td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">75 / 100</td>
+                                  <td data-v-a11c5244="">6</td>
+                                  <td data-v-a11c5244="">B-</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    UN101-Academic reading &amp; writing (1)
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">52 / 100</td>
+                                  <td data-v-a11c5244="">4</td>
+                                  <td data-v-a11c5244="">D</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    UN102-Computer skills
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">67 / 100</td>
+                                  <td data-v-a11c5244="">4.80</td>
+                                  <td data-v-a11c5244="">C-</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    UN103-Critical thinking
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">46.50 / 100</td>
+                                  <td data-v-a11c5244="">—</td>
+                                  <td data-v-a11c5244="">F</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </main>
+            <main id="payments-section" data-v-7a96a3fc="" class="v-main"
+              style="display:none; --v-layout-left: 0px; --v-layout-right: 0px; --v-layout-top: 64px; --v-layout-bottom: 0px;">
+              <div data-v-7a96a3fc="" class="v-container v-locale--is-ltr">
+                <div data-v-7a96a3fc="" class="p-4 max-w-3xl mx-auto">
+                  <h2 class="text-xl font-bold mb-4">💸 Student Fees</h2>
+                  <div>
+                    <div class="mb-6">
+                      <h3 class="text-lg font-semibold mb-2">📌 Outstanding Fees</h3>
+                      <div>
+
+                        <div class="border rounded-lg p-3 mb-2 flex justify-between items-center hover:bg-gray-50">
+                          <div><input type="checkbox" class="mr-2" value="56266"><span class="font-medium">مصاريف التيرم
+                              الثاني -2025 - الفرقة الثالثة</span></div>
+                          <div>21000.00 EGP</div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="border-t pt-4 mt-4 text-right">
+                      <p class="text-sm mb-1">Subtotal: 0.00 EGP</p>
+                      <p class="text-sm mb-1"> Bank Fees: 0.00 EGP </p>
+                      <p class="text-lg font-bold">Total: 0.00 EGP</p><button
+                        class="mt-4 bg-blue text-white px-4 py-2 rounded-lg hover:bg-green disabled:opacity-50"
+                        disabled=""> Proceed to Payment </button>
+                    </div>
+                    <div class="mb-6">
+                      <h3 class="text-lg font-semibold mb-2">✅ Paid Fees</h3>
+                      <div class="border rounded-lg p-3 mb-2 flex justify-between items-center hover:bg-gray-50">
+                        <div><span class="font-medium">مصاريف التيرم
+                            الأول - 2025 - الفرقة الثالثة</span></div>
+                        <div>21000.00 EGP</div>
+                      </div>
+                      <div class="border rounded-lg p-3 mb-2 flex justify-between items-center hover:bg-gray-50">
+                        <div><span class="font-medium">الأنشطة
+                            الطلابية</span></div>
+                        <div>500.00 EGP</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
