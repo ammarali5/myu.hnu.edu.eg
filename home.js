@@ -7,8 +7,8 @@ logoutBtn.addEventListener("click", () => {
 
 
 
-const menuBtn = document.querySelector(".v-btn");
-const navDrawer = document.querySelector(".v-navigation-drawer");
+const menuBtn = document.getElementById("menu-btn");
+const navDrawer = document.getElementById("nav-side-bar");
 
 menuBtn.addEventListener("click", () => {
   // toggle between hidden and visible

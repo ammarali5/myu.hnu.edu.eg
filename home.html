@@ -441,7 +441,7 @@
                 ">
               <!---->
               <div class="v-toolbar__content" style="height: 64px">
-                <!----><!----><button data-v-7a96a3fc="" type="button"
+                <!----><!----><button id="menu-btn" data-v-7a96a3fc="" type="button"
                   class="v-btn v-btn--icon v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text">
                   <span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!----><span
                     class="v-btn__content" data-no-activator=""><i
@@ -449,12 +449,16 @@
                       aria-hidden="true"></i></span><!----><!---->
                 </button>
                 <div data-v-7a96a3fc="" class="v-toolbar-title ml-2">
-                  <div class="v-toolbar-title__placeholder"><!---->my HNU</div>
+                  <div class="v-toolbar-title__placeholder">
+                    <!---->my HNU
+                  </div>
                 </div>
                 <div data-v-7a96a3fc="" class="v-spacer"></div>
-                  <button data-v-7a96a3fc="" type="button"
-                  class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text"
-                  id="log_out">
+                <div data-v-7a96a3fc="" class="mr-4 text-body-1 font-weight-medium">
+                  942230211, محمد هشام محمد فوزى عبدالله
+                </div>
+                <button id="log_out" data-v-7a96a3fc="" type="button"
+                  class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text">
                   <span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><span
                     class="v-btn__prepend"><i
                       class="mdi-logout mdi v-icon notranslate v-theme--light v-icon--size-default"
@@ -463,7 +467,7 @@
               </div>
               <!---->
             </header>
-            <nav class="v-navigation-drawer v-navigation-drawer--left v-theme--light" data-v-7a96a3fc="" style="
+            <nav id="nav-side-bar" class="v-navigation-drawer v-navigation-drawer--left v-theme--light" data-v-7a96a3fc="" style="
                   left: 0px;
                   z-index: 1004;
                   transform: translateX(-256px);
@@ -502,702 +506,391 @@
               <!---->
             </nav>
             <!---->
-            <main id="home-section" data-v-7a96a3fc="" class="v-main"
-              style="--v-layout-left: 0px; --v-layout-right: 0px; --v-layout-top: 64px; --v-layout-bottom: 0px;">
+            <main id="home-section" data-v-7a96a3fc="" class="v-main" style="
+                  --v-layout-left: 0px;
+                  --v-layout-right: 0px;
+                  --v-layout-top: 64px;
+                  --v-layout-bottom: 0px;
+                ">
               <div data-v-7a96a3fc="" class="v-container v-locale--is-ltr">
                 <div data-v-7a96a3fc="">
                   <h2>Dashboard</h2>
                   <div data-v-a11c5244="" class="v-container v-locale--is-ltr">
-                    <h2 data-v-a11c5244="" class="text-h5 mb-4">📊 Final Grades</h2>
+                    <h2 data-v-a11c5244="" class="text-h5 mb-4">
+                      📊 Final Grades
+                    </h2>
                     <div data-v-a11c5244="">
                       <div data-v-a11c5244="" class="mb-8">
-                        <h3 data-v-a11c5244="" class="text-h6 mb-2">2024 - SPRING</h3>
-                        <div data-v-a11c5244="" class="d-flex flex-column gap-2">
-                          <div data-v-a11c5244=""
-                            class="v-card v-theme--light v-card--density-default v-card--variant-elevated pa-3 elevation-1 hoverable-card">
-                            <!---->
-                            <div class="v-card__loader">
-                              <div class="v-progress-linear v-theme--light v-locale--is-ltr" role="progressbar"
-                                aria-hidden="true" aria-valuemin="0" aria-valuemax="100"
-                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px;"><!---->
-                                <div class="v-progress-linear__background"></div>
-                                <div class="v-progress-linear__buffer" style="width: 0%;"></div>
-                                <div class="v-progress-linear__indeterminate">
-                                  <div class="v-progress-linear__indeterminate long"></div>
-                                  <div class="v-progress-linear__indeterminate short"></div>
-                                </div><!---->
-                              </div>
-                            </div><!----><!---->
-                            <div data-v-a11c5244="" class="text-subtitle-1 font-weight-bold">ETHS15-Basic life support
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Credit Hours: 1</div>
-                            <div data-v-a11c5244="" class="text-caption"> Marks: 30 / 50</div>
-                            <div data-v-a11c5244="" class="text-caption"> Points: 2</div>
-                            <div data-v-a11c5244="" class="text-caption"> Grade: <strong data-v-a11c5244="">D</strong>
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Comment: <strong data-v-a11c5244="">—</strong>
-                            </div><!----><!----><span class="v-card__underlay"></span>
+                        <h3 data-v-a11c5244="" class="text-h6 mb-2">
+                          2024 - SPRING
+                        </h3>
+                        <div data-v-a11c5244="" class="v-table v-theme--light v-table--density-default">
+                          <!---->
+                          <div class="v-table__wrapper">
+                            <table>
+                              <thead data-v-a11c5244="">
+                                <tr data-v-a11c5244="">
+                                  <th data-v-a11c5244="">Subject</th>
+                                  <th data-v-a11c5244="">Credit Hours</th>
+                                  <th data-v-a11c5244="">Marks</th>
+                                  <th data-v-a11c5244="">Points</th>
+                                  <th data-v-a11c5244="">Grade</th>
+                                  <th data-v-a11c5244="">Comment</th>
+                                </tr>
+                              </thead>
+                              <tbody data-v-a11c5244="">
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    ETHS15-Basic life support
+                                  </td>
+                                  <td data-v-a11c5244="">1</td>
+                                  <td data-v-a11c5244="">30 / 50</td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">D</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    TL216-Hematology for technologists (1)
+                                  </td>
+                                  <td data-v-a11c5244="">4</td>
+                                  <td data-v-a11c5244="">165 / 200</td>
+                                  <td data-v-a11c5244="">13.60</td>
+                                  <td data-v-a11c5244="">B+</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    TL217-Systematic physiology for
+                                    technologists
+                                  </td>
+                                  <td data-v-a11c5244="">4</td>
+                                  <td data-v-a11c5244="">150.50 / 200</td>
+                                  <td data-v-a11c5244="">12</td>
+                                  <td data-v-a11c5244="">B-</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    TL218-General biology for technologists
+                                  </td>
+                                  <td data-v-a11c5244="">3</td>
+                                  <td data-v-a11c5244="">120.50 / 150</td>
+                                  <td data-v-a11c5244="">9.60</td>
+                                  <td data-v-a11c5244="">B</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    TL215-Molecular biology for technologists
+                                  </td>
+                                  <td data-v-a11c5244="">4</td>
+                                  <td data-v-a11c5244="">158 / 200</td>
+                                  <td data-v-a11c5244="">12.80</td>
+                                  <td data-v-a11c5244="">B</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                              </tbody>
+                            </table>
                           </div>
-                          <div data-v-a11c5244=""
-                            class="v-card v-theme--light v-card--density-default v-card--variant-elevated pa-3 elevation-1 hoverable-card">
-                            <!---->
-                            <div class="v-card__loader">
-                              <div class="v-progress-linear v-theme--light v-locale--is-ltr" role="progressbar"
-                                aria-hidden="true" aria-valuemin="0" aria-valuemax="100"
-                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px;"><!---->
-                                <div class="v-progress-linear__background"></div>
-                                <div class="v-progress-linear__buffer" style="width: 0%;"></div>
-                                <div class="v-progress-linear__indeterminate">
-                                  <div class="v-progress-linear__indeterminate long"></div>
-                                  <div class="v-progress-linear__indeterminate short"></div>
-                                </div><!---->
-                              </div>
-                            </div><!----><!---->
-                            <div data-v-a11c5244="" class="text-subtitle-1 font-weight-bold">TL216-Hematology for
-                              technologists (1)</div>
-                            <div data-v-a11c5244="" class="text-caption"> Credit Hours: 4</div>
-                            <div data-v-a11c5244="" class="text-caption"> Marks: 165 / 200</div>
-                            <div data-v-a11c5244="" class="text-caption"> Points: 13.60</div>
-                            <div data-v-a11c5244="" class="text-caption"> Grade: <strong data-v-a11c5244="">B+</strong>
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Comment: <strong data-v-a11c5244="">—</strong>
-                            </div><!----><!----><span class="v-card__underlay"></span>
-                          </div>
-                          <div data-v-a11c5244=""
-                            class="v-card v-theme--light v-card--density-default v-card--variant-elevated pa-3 elevation-1 hoverable-card">
-                            <!---->
-                            <div class="v-card__loader">
-                              <div class="v-progress-linear v-theme--light v-locale--is-ltr" role="progressbar"
-                                aria-hidden="true" aria-valuemin="0" aria-valuemax="100"
-                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px;"><!---->
-                                <div class="v-progress-linear__background"></div>
-                                <div class="v-progress-linear__buffer" style="width: 0%;"></div>
-                                <div class="v-progress-linear__indeterminate">
-                                  <div class="v-progress-linear__indeterminate long"></div>
-                                  <div class="v-progress-linear__indeterminate short"></div>
-                                </div><!---->
-                              </div>
-                            </div><!----><!---->
-                            <div data-v-a11c5244="" class="text-subtitle-1 font-weight-bold">TL217-Systematic physiology
-                              for technologists</div>
-                            <div data-v-a11c5244="" class="text-caption"> Credit Hours: 4</div>
-                            <div data-v-a11c5244="" class="text-caption"> Marks: 150.50 / 200</div>
-                            <div data-v-a11c5244="" class="text-caption"> Points: 12</div>
-                            <div data-v-a11c5244="" class="text-caption"> Grade: <strong data-v-a11c5244="">B-</strong>
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Comment: <strong data-v-a11c5244="">—</strong>
-                            </div><!----><!----><span class="v-card__underlay"></span>
-                          </div>
-                          <div data-v-a11c5244=""
-                            class="v-card v-theme--light v-card--density-default v-card--variant-elevated pa-3 elevation-1 hoverable-card">
-                            <!---->
-                            <div class="v-card__loader">
-                              <div class="v-progress-linear v-theme--light v-locale--is-ltr" role="progressbar"
-                                aria-hidden="true" aria-valuemin="0" aria-valuemax="100"
-                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px;"><!---->
-                                <div class="v-progress-linear__background"></div>
-                                <div class="v-progress-linear__buffer" style="width: 0%;"></div>
-                                <div class="v-progress-linear__indeterminate">
-                                  <div class="v-progress-linear__indeterminate long"></div>
-                                  <div class="v-progress-linear__indeterminate short"></div>
-                                </div><!---->
-                              </div>
-                            </div><!----><!---->
-                            <div data-v-a11c5244="" class="text-subtitle-1 font-weight-bold">TL218-General biology for
-                              technologists</div>
-                            <div data-v-a11c5244="" class="text-caption"> Credit Hours: 3</div>
-                            <div data-v-a11c5244="" class="text-caption"> Marks: 120.50 / 150</div>
-                            <div data-v-a11c5244="" class="text-caption"> Points: 9.60</div>
-                            <div data-v-a11c5244="" class="text-caption"> Grade: <strong data-v-a11c5244="">B</strong>
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Comment: <strong data-v-a11c5244="">—</strong>
-                            </div><!----><!----><span class="v-card__underlay"></span>
-                          </div>
-                          <div data-v-a11c5244=""
-                            class="v-card v-theme--light v-card--density-default v-card--variant-elevated pa-3 elevation-1 hoverable-card">
-                            <!---->
-                            <div class="v-card__loader">
-                              <div class="v-progress-linear v-theme--light v-locale--is-ltr" role="progressbar"
-                                aria-hidden="true" aria-valuemin="0" aria-valuemax="100"
-                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px;"><!---->
-                                <div class="v-progress-linear__background"></div>
-                                <div class="v-progress-linear__buffer" style="width: 0%;"></div>
-                                <div class="v-progress-linear__indeterminate">
-                                  <div class="v-progress-linear__indeterminate long"></div>
-                                  <div class="v-progress-linear__indeterminate short"></div>
-                                </div><!---->
-                              </div>
-                            </div><!----><!---->
-                            <div data-v-a11c5244="" class="text-subtitle-1 font-weight-bold">TL215-Molecular biology for
-                              technologists</div>
-                            <div data-v-a11c5244="" class="text-caption"> Credit Hours: 4</div>
-                            <div data-v-a11c5244="" class="text-caption"> Marks: 158 / 200</div>
-                            <div data-v-a11c5244="" class="text-caption"> Points: 12.80</div>
-                            <div data-v-a11c5244="" class="text-caption"> Grade: <strong data-v-a11c5244="">B</strong>
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Comment: <strong data-v-a11c5244="">—</strong>
-                            </div><!----><!----><span class="v-card__underlay"></span>
-                          </div>
+                          <!---->
                         </div>
                       </div>
                       <div data-v-a11c5244="" class="mb-8">
-                        <h3 data-v-a11c5244="" class="text-h6 mb-2">2024 - FALL</h3>
-                        <div data-v-a11c5244="" class="d-flex flex-column gap-2">
-                          <div data-v-a11c5244=""
-                            class="v-card v-theme--light v-card--density-default v-card--variant-elevated pa-3 elevation-1 hoverable-card">
-                            <!---->
-                            <div class="v-card__loader">
-                              <div class="v-progress-linear v-theme--light v-locale--is-ltr" role="progressbar"
-                                aria-hidden="true" aria-valuemin="0" aria-valuemax="100"
-                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px;"><!---->
-                                <div class="v-progress-linear__background"></div>
-                                <div class="v-progress-linear__buffer" style="width: 0%;"></div>
-                                <div class="v-progress-linear__indeterminate">
-                                  <div class="v-progress-linear__indeterminate long"></div>
-                                  <div class="v-progress-linear__indeterminate short"></div>
-                                </div><!---->
-                              </div>
-                            </div><!----><!---->
-                            <div data-v-a11c5244="" class="text-subtitle-1 font-weight-bold">THS2010-Mechatronic
-                              engineering</div>
-                            <div data-v-a11c5244="" class="text-caption"> Credit Hours: 2</div>
-                            <div data-v-a11c5244="" class="text-caption"> Marks: 74 / 100</div>
-                            <div data-v-a11c5244="" class="text-caption"> Points: 5.60</div>
-                            <div data-v-a11c5244="" class="text-caption"> Grade: <strong data-v-a11c5244="">C+</strong>
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Comment: <strong data-v-a11c5244="">—</strong>
-                            </div><!----><!----><span class="v-card__underlay"></span>
+                        <h3 data-v-a11c5244="" class="text-h6 mb-2">
+                          2024 - FALL
+                        </h3>
+                        <div data-v-a11c5244="" class="v-table v-theme--light v-table--density-default">
+                          <!---->
+                          <div class="v-table__wrapper">
+                            <table>
+                              <thead data-v-a11c5244="">
+                                <tr data-v-a11c5244="">
+                                  <th data-v-a11c5244="">Subject</th>
+                                  <th data-v-a11c5244="">Credit Hours</th>
+                                  <th data-v-a11c5244="">Marks</th>
+                                  <th data-v-a11c5244="">Points</th>
+                                  <th data-v-a11c5244="">Grade</th>
+                                  <th data-v-a11c5244="">Comment</th>
+                                </tr>
+                              </thead>
+                              <tbody data-v-a11c5244="">
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    THS2010-Mechatronic engineering
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">74 / 100</td>
+                                  <td data-v-a11c5244="">5.60</td>
+                                  <td data-v-a11c5244="">C+</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    TL201-Biochemistry for technologists
+                                  </td>
+                                  <td data-v-a11c5244="">4</td>
+                                  <td data-v-a11c5244="">156 / 200</td>
+                                  <td data-v-a11c5244="">12.80</td>
+                                  <td data-v-a11c5244="">B</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    TL202-Parasitology for technologists
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">82 / 100</td>
+                                  <td data-v-a11c5244="">6.40</td>
+                                  <td data-v-a11c5244="">B</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    TL203-Bacteriology for technologists
+                                  </td>
+                                  <td data-v-a11c5244="">4</td>
+                                  <td data-v-a11c5244="">160.50 / 200</td>
+                                  <td data-v-a11c5244="">12.80</td>
+                                  <td data-v-a11c5244="">B</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    TL204-Histology for laboratory for
+                                    technologists
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">71 / 100</td>
+                                  <td data-v-a11c5244="">5.20</td>
+                                  <td data-v-a11c5244="">C</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    UN5-Foundation of digital technology
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">85 / 100</td>
+                                  <td data-v-a11c5244="">7.20</td>
+                                  <td data-v-a11c5244="">A-</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    UN6-English language 3
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">71.50 / 100</td>
+                                  <td data-v-a11c5244="">5.20</td>
+                                  <td data-v-a11c5244="">C</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                              </tbody>
+                            </table>
                           </div>
-                          <div data-v-a11c5244=""
-                            class="v-card v-theme--light v-card--density-default v-card--variant-elevated pa-3 elevation-1 hoverable-card">
-                            <!---->
-                            <div class="v-card__loader">
-                              <div class="v-progress-linear v-theme--light v-locale--is-ltr" role="progressbar"
-                                aria-hidden="true" aria-valuemin="0" aria-valuemax="100"
-                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px;"><!---->
-                                <div class="v-progress-linear__background"></div>
-                                <div class="v-progress-linear__buffer" style="width: 0%;"></div>
-                                <div class="v-progress-linear__indeterminate">
-                                  <div class="v-progress-linear__indeterminate long"></div>
-                                  <div class="v-progress-linear__indeterminate short"></div>
-                                </div><!---->
-                              </div>
-                            </div><!----><!---->
-                            <div data-v-a11c5244="" class="text-subtitle-1 font-weight-bold">TL201-Biochemistry for
-                              technologists</div>
-                            <div data-v-a11c5244="" class="text-caption"> Credit Hours: 4</div>
-                            <div data-v-a11c5244="" class="text-caption"> Marks: 156 / 200</div>
-                            <div data-v-a11c5244="" class="text-caption"> Points: 12.80</div>
-                            <div data-v-a11c5244="" class="text-caption"> Grade: <strong data-v-a11c5244="">B</strong>
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Comment: <strong data-v-a11c5244="">—</strong>
-                            </div><!----><!----><span class="v-card__underlay"></span>
-                          </div>
-                          <div data-v-a11c5244=""
-                            class="v-card v-theme--light v-card--density-default v-card--variant-elevated pa-3 elevation-1 hoverable-card">
-                            <!---->
-                            <div class="v-card__loader">
-                              <div class="v-progress-linear v-theme--light v-locale--is-ltr" role="progressbar"
-                                aria-hidden="true" aria-valuemin="0" aria-valuemax="100"
-                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px;"><!---->
-                                <div class="v-progress-linear__background"></div>
-                                <div class="v-progress-linear__buffer" style="width: 0%;"></div>
-                                <div class="v-progress-linear__indeterminate">
-                                  <div class="v-progress-linear__indeterminate long"></div>
-                                  <div class="v-progress-linear__indeterminate short"></div>
-                                </div><!---->
-                              </div>
-                            </div><!----><!---->
-                            <div data-v-a11c5244="" class="text-subtitle-1 font-weight-bold">TL202-Parasitology for
-                              technologists</div>
-                            <div data-v-a11c5244="" class="text-caption"> Credit Hours: 2</div>
-                            <div data-v-a11c5244="" class="text-caption"> Marks: 82 / 100</div>
-                            <div data-v-a11c5244="" class="text-caption"> Points: 6.40</div>
-                            <div data-v-a11c5244="" class="text-caption"> Grade: <strong data-v-a11c5244="">B</strong>
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Comment: <strong data-v-a11c5244="">—</strong>
-                            </div><!----><!----><span class="v-card__underlay"></span>
-                          </div>
-                          <div data-v-a11c5244=""
-                            class="v-card v-theme--light v-card--density-default v-card--variant-elevated pa-3 elevation-1 hoverable-card">
-                            <!---->
-                            <div class="v-card__loader">
-                              <div class="v-progress-linear v-theme--light v-locale--is-ltr" role="progressbar"
-                                aria-hidden="true" aria-valuemin="0" aria-valuemax="100"
-                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px;"><!---->
-                                <div class="v-progress-linear__background"></div>
-                                <div class="v-progress-linear__buffer" style="width: 0%;"></div>
-                                <div class="v-progress-linear__indeterminate">
-                                  <div class="v-progress-linear__indeterminate long"></div>
-                                  <div class="v-progress-linear__indeterminate short"></div>
-                                </div><!---->
-                              </div>
-                            </div><!----><!---->
-                            <div data-v-a11c5244="" class="text-subtitle-1 font-weight-bold">TL203-Bacteriology for
-                              technologists</div>
-                            <div data-v-a11c5244="" class="text-caption"> Credit Hours: 4</div>
-                            <div data-v-a11c5244="" class="text-caption"> Marks: 160.50 / 200</div>
-                            <div data-v-a11c5244="" class="text-caption"> Points: 12.80</div>
-                            <div data-v-a11c5244="" class="text-caption"> Grade: <strong data-v-a11c5244="">B</strong>
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Comment: <strong data-v-a11c5244="">—</strong>
-                            </div><!----><!----><span class="v-card__underlay"></span>
-                          </div>
-                          <div data-v-a11c5244=""
-                            class="v-card v-theme--light v-card--density-default v-card--variant-elevated pa-3 elevation-1 hoverable-card">
-                            <!---->
-                            <div class="v-card__loader">
-                              <div class="v-progress-linear v-theme--light v-locale--is-ltr" role="progressbar"
-                                aria-hidden="true" aria-valuemin="0" aria-valuemax="100"
-                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px;"><!---->
-                                <div class="v-progress-linear__background"></div>
-                                <div class="v-progress-linear__buffer" style="width: 0%;"></div>
-                                <div class="v-progress-linear__indeterminate">
-                                  <div class="v-progress-linear__indeterminate long"></div>
-                                  <div class="v-progress-linear__indeterminate short"></div>
-                                </div><!---->
-                              </div>
-                            </div><!----><!---->
-                            <div data-v-a11c5244="" class="text-subtitle-1 font-weight-bold">TL204-Histology for
-                              laboratory for technologists</div>
-                            <div data-v-a11c5244="" class="text-caption"> Credit Hours: 2</div>
-                            <div data-v-a11c5244="" class="text-caption"> Marks: 71 / 100</div>
-                            <div data-v-a11c5244="" class="text-caption"> Points: 5.20</div>
-                            <div data-v-a11c5244="" class="text-caption"> Grade: <strong data-v-a11c5244="">C</strong>
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Comment: <strong data-v-a11c5244="">—</strong>
-                            </div><!----><!----><span class="v-card__underlay"></span>
-                          </div>
-                          <div data-v-a11c5244=""
-                            class="v-card v-theme--light v-card--density-default v-card--variant-elevated pa-3 elevation-1 hoverable-card">
-                            <!---->
-                            <div class="v-card__loader">
-                              <div class="v-progress-linear v-theme--light v-locale--is-ltr" role="progressbar"
-                                aria-hidden="true" aria-valuemin="0" aria-valuemax="100"
-                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px;"><!---->
-                                <div class="v-progress-linear__background"></div>
-                                <div class="v-progress-linear__buffer" style="width: 0%;"></div>
-                                <div class="v-progress-linear__indeterminate">
-                                  <div class="v-progress-linear__indeterminate long"></div>
-                                  <div class="v-progress-linear__indeterminate short"></div>
-                                </div><!---->
-                              </div>
-                            </div><!----><!---->
-                            <div data-v-a11c5244="" class="text-subtitle-1 font-weight-bold">UN5-Foundation of digital
-                              technology</div>
-                            <div data-v-a11c5244="" class="text-caption"> Credit Hours: 2</div>
-                            <div data-v-a11c5244="" class="text-caption"> Marks: 85 / 100</div>
-                            <div data-v-a11c5244="" class="text-caption"> Points: 7.20</div>
-                            <div data-v-a11c5244="" class="text-caption"> Grade: <strong data-v-a11c5244="">A-</strong>
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Comment: <strong data-v-a11c5244="">—</strong>
-                            </div><!----><!----><span class="v-card__underlay"></span>
-                          </div>
-                          <div data-v-a11c5244=""
-                            class="v-card v-theme--light v-card--density-default v-card--variant-elevated pa-3 elevation-1 hoverable-card">
-                            <!---->
-                            <div class="v-card__loader">
-                              <div class="v-progress-linear v-theme--light v-locale--is-ltr" role="progressbar"
-                                aria-hidden="true" aria-valuemin="0" aria-valuemax="100"
-                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px;"><!---->
-                                <div class="v-progress-linear__background"></div>
-                                <div class="v-progress-linear__buffer" style="width: 0%;"></div>
-                                <div class="v-progress-linear__indeterminate">
-                                  <div class="v-progress-linear__indeterminate long"></div>
-                                  <div class="v-progress-linear__indeterminate short"></div>
-                                </div><!---->
-                              </div>
-                            </div><!----><!---->
-                            <div data-v-a11c5244="" class="text-subtitle-1 font-weight-bold">UN6-English language 3
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Credit Hours: 2</div>
-                            <div data-v-a11c5244="" class="text-caption"> Marks: 71.50 / 100</div>
-                            <div data-v-a11c5244="" class="text-caption"> Points: 5.20</div>
-                            <div data-v-a11c5244="" class="text-caption"> Grade: <strong data-v-a11c5244="">C</strong>
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Comment: <strong data-v-a11c5244="">—</strong>
-                            </div><!----><!----><span class="v-card__underlay"></span>
-                          </div>
+                          <!---->
                         </div>
                       </div>
                       <div data-v-a11c5244="" class="mb-8">
-                        <h3 data-v-a11c5244="" class="text-h6 mb-2">2023 - SPRING</h3>
-                        <div data-v-a11c5244="" class="d-flex flex-column gap-2">
-                          <div data-v-a11c5244=""
-                            class="v-card v-theme--light v-card--density-default v-card--variant-elevated pa-3 elevation-1 hoverable-card">
-                            <!---->
-                            <div class="v-card__loader">
-                              <div class="v-progress-linear v-theme--light v-locale--is-ltr" role="progressbar"
-                                aria-hidden="true" aria-valuemin="0" aria-valuemax="100"
-                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px;"><!---->
-                                <div class="v-progress-linear__background"></div>
-                                <div class="v-progress-linear__buffer" style="width: 0%;"></div>
-                                <div class="v-progress-linear__indeterminate">
-                                  <div class="v-progress-linear__indeterminate long"></div>
-                                  <div class="v-progress-linear__indeterminate short"></div>
-                                </div><!---->
-                              </div>
-                            </div><!----><!---->
-                            <div data-v-a11c5244="" class="text-subtitle-1 font-weight-bold">THS1110-Professional ethics
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Credit Hours: 1</div>
-                            <div data-v-a11c5244="" class="text-caption"> Marks: 50 / 50</div>
-                            <div data-v-a11c5244="" class="text-caption"> Points: 4</div>
-                            <div data-v-a11c5244="" class="text-caption"> Grade: <strong data-v-a11c5244="">A+</strong>
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Comment: <strong data-v-a11c5244="">—</strong>
-                            </div><!----><!----><span class="v-card__underlay"></span>
+                        <h3 data-v-a11c5244="" class="text-h6 mb-2">
+                          2023 - SPRING
+                        </h3>
+                        <div data-v-a11c5244="" class="v-table v-theme--light v-table--density-default">
+                          <!---->
+                          <div class="v-table__wrapper">
+                            <table>
+                              <thead data-v-a11c5244="">
+                                <tr data-v-a11c5244="">
+                                  <th data-v-a11c5244="">Subject</th>
+                                  <th data-v-a11c5244="">Credit Hours</th>
+                                  <th data-v-a11c5244="">Marks</th>
+                                  <th data-v-a11c5244="">Points</th>
+                                  <th data-v-a11c5244="">Grade</th>
+                                  <th data-v-a11c5244="">Comment</th>
+                                </tr>
+                              </thead>
+                              <tbody data-v-a11c5244="">
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    THS1110-Professional ethics
+                                  </td>
+                                  <td data-v-a11c5244="">1</td>
+                                  <td data-v-a11c5244="">50 / 50</td>
+                                  <td data-v-a11c5244="">4</td>
+                                  <td data-v-a11c5244="">A+</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    THS115-Electronic circuits &amp; devices
+                                  </td>
+                                  <td data-v-a11c5244="">3</td>
+                                  <td data-v-a11c5244="">113 / 150</td>
+                                  <td data-v-a11c5244="">9</td>
+                                  <td data-v-a11c5244="">B-</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    THS116-General anatomy &amp; histology for
+                                    technologists
+                                  </td>
+                                  <td data-v-a11c5244="">3</td>
+                                  <td data-v-a11c5244="">119 / 150</td>
+                                  <td data-v-a11c5244="">9.60</td>
+                                  <td data-v-a11c5244="">B</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    THS118-General Microbiology
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">80 / 100</td>
+                                  <td data-v-a11c5244="">6.40</td>
+                                  <td data-v-a11c5244="">B</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    THS119-General Chemistry
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">70 / 100</td>
+                                  <td data-v-a11c5244="">5.20</td>
+                                  <td data-v-a11c5244="">C</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    UN114-Academic reading &amp; writing (2)
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">78 / 100</td>
+                                  <td data-v-a11c5244="">6.40</td>
+                                  <td data-v-a11c5244="">B</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    UN30-Social Issues
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">50 / 50</td>
+                                  <td data-v-a11c5244="">—</td>
+                                  <td data-v-a11c5244="">P</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    THS117-General physiology for
+                                    technologists
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">69.50 / 100</td>
+                                  <td data-v-a11c5244="">5.20</td>
+                                  <td data-v-a11c5244="">C</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                              </tbody>
+                            </table>
                           </div>
-                          <div data-v-a11c5244=""
-                            class="v-card v-theme--light v-card--density-default v-card--variant-elevated pa-3 elevation-1 hoverable-card">
-                            <!---->
-                            <div class="v-card__loader">
-                              <div class="v-progress-linear v-theme--light v-locale--is-ltr" role="progressbar"
-                                aria-hidden="true" aria-valuemin="0" aria-valuemax="100"
-                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px;"><!---->
-                                <div class="v-progress-linear__background"></div>
-                                <div class="v-progress-linear__buffer" style="width: 0%;"></div>
-                                <div class="v-progress-linear__indeterminate">
-                                  <div class="v-progress-linear__indeterminate long"></div>
-                                  <div class="v-progress-linear__indeterminate short"></div>
-                                </div><!---->
-                              </div>
-                            </div><!----><!---->
-                            <div data-v-a11c5244="" class="text-subtitle-1 font-weight-bold">THS115-Electronic circuits
-                              &amp; devices</div>
-                            <div data-v-a11c5244="" class="text-caption"> Credit Hours: 3</div>
-                            <div data-v-a11c5244="" class="text-caption"> Marks: 113 / 150</div>
-                            <div data-v-a11c5244="" class="text-caption"> Points: 9</div>
-                            <div data-v-a11c5244="" class="text-caption"> Grade: <strong data-v-a11c5244="">B-</strong>
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Comment: <strong data-v-a11c5244="">—</strong>
-                            </div><!----><!----><span class="v-card__underlay"></span>
-                          </div>
-                          <div data-v-a11c5244=""
-                            class="v-card v-theme--light v-card--density-default v-card--variant-elevated pa-3 elevation-1 hoverable-card">
-                            <!---->
-                            <div class="v-card__loader">
-                              <div class="v-progress-linear v-theme--light v-locale--is-ltr" role="progressbar"
-                                aria-hidden="true" aria-valuemin="0" aria-valuemax="100"
-                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px;"><!---->
-                                <div class="v-progress-linear__background"></div>
-                                <div class="v-progress-linear__buffer" style="width: 0%;"></div>
-                                <div class="v-progress-linear__indeterminate">
-                                  <div class="v-progress-linear__indeterminate long"></div>
-                                  <div class="v-progress-linear__indeterminate short"></div>
-                                </div><!---->
-                              </div>
-                            </div><!----><!---->
-                            <div data-v-a11c5244="" class="text-subtitle-1 font-weight-bold">THS116-General anatomy
-                              &amp; histology for technologists</div>
-                            <div data-v-a11c5244="" class="text-caption"> Credit Hours: 3</div>
-                            <div data-v-a11c5244="" class="text-caption"> Marks: 119 / 150</div>
-                            <div data-v-a11c5244="" class="text-caption"> Points: 9.60</div>
-                            <div data-v-a11c5244="" class="text-caption"> Grade: <strong data-v-a11c5244="">B</strong>
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Comment: <strong data-v-a11c5244="">—</strong>
-                            </div><!----><!----><span class="v-card__underlay"></span>
-                          </div>
-                          <div data-v-a11c5244=""
-                            class="v-card v-theme--light v-card--density-default v-card--variant-elevated pa-3 elevation-1 hoverable-card">
-                            <!---->
-                            <div class="v-card__loader">
-                              <div class="v-progress-linear v-theme--light v-locale--is-ltr" role="progressbar"
-                                aria-hidden="true" aria-valuemin="0" aria-valuemax="100"
-                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px;"><!---->
-                                <div class="v-progress-linear__background"></div>
-                                <div class="v-progress-linear__buffer" style="width: 0%;"></div>
-                                <div class="v-progress-linear__indeterminate">
-                                  <div class="v-progress-linear__indeterminate long"></div>
-                                  <div class="v-progress-linear__indeterminate short"></div>
-                                </div><!---->
-                              </div>
-                            </div><!----><!---->
-                            <div data-v-a11c5244="" class="text-subtitle-1 font-weight-bold">THS118-General Microbiology
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Credit Hours: 2</div>
-                            <div data-v-a11c5244="" class="text-caption"> Marks: 80 / 100</div>
-                            <div data-v-a11c5244="" class="text-caption"> Points: 6.40</div>
-                            <div data-v-a11c5244="" class="text-caption"> Grade: <strong data-v-a11c5244="">B</strong>
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Comment: <strong data-v-a11c5244="">—</strong>
-                            </div><!----><!----><span class="v-card__underlay"></span>
-                          </div>
-                          <div data-v-a11c5244=""
-                            class="v-card v-theme--light v-card--density-default v-card--variant-elevated pa-3 elevation-1 hoverable-card">
-                            <!---->
-                            <div class="v-card__loader">
-                              <div class="v-progress-linear v-theme--light v-locale--is-ltr" role="progressbar"
-                                aria-hidden="true" aria-valuemin="0" aria-valuemax="100"
-                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px;"><!---->
-                                <div class="v-progress-linear__background"></div>
-                                <div class="v-progress-linear__buffer" style="width: 0%;"></div>
-                                <div class="v-progress-linear__indeterminate">
-                                  <div class="v-progress-linear__indeterminate long"></div>
-                                  <div class="v-progress-linear__indeterminate short"></div>
-                                </div><!---->
-                              </div>
-                            </div><!----><!---->
-                            <div data-v-a11c5244="" class="text-subtitle-1 font-weight-bold">THS119-General Chemistry
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Credit Hours: 2</div>
-                            <div data-v-a11c5244="" class="text-caption"> Marks: 70 / 100</div>
-                            <div data-v-a11c5244="" class="text-caption"> Points: 5.20</div>
-                            <div data-v-a11c5244="" class="text-caption"> Grade: <strong data-v-a11c5244="">C</strong>
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Comment: <strong data-v-a11c5244="">—</strong>
-                            </div><!----><!----><span class="v-card__underlay"></span>
-                          </div>
-                          <div data-v-a11c5244=""
-                            class="v-card v-theme--light v-card--density-default v-card--variant-elevated pa-3 elevation-1 hoverable-card">
-                            <!---->
-                            <div class="v-card__loader">
-                              <div class="v-progress-linear v-theme--light v-locale--is-ltr" role="progressbar"
-                                aria-hidden="true" aria-valuemin="0" aria-valuemax="100"
-                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px;"><!---->
-                                <div class="v-progress-linear__background"></div>
-                                <div class="v-progress-linear__buffer" style="width: 0%;"></div>
-                                <div class="v-progress-linear__indeterminate">
-                                  <div class="v-progress-linear__indeterminate long"></div>
-                                  <div class="v-progress-linear__indeterminate short"></div>
-                                </div><!---->
-                              </div>
-                            </div><!----><!---->
-                            <div data-v-a11c5244="" class="text-subtitle-1 font-weight-bold">UN114-Academic reading
-                              &amp; writing (2)</div>
-                            <div data-v-a11c5244="" class="text-caption"> Credit Hours: 2</div>
-                            <div data-v-a11c5244="" class="text-caption"> Marks: 78 / 100</div>
-                            <div data-v-a11c5244="" class="text-caption"> Points: 6.40</div>
-                            <div data-v-a11c5244="" class="text-caption"> Grade: <strong data-v-a11c5244="">B</strong>
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Comment: <strong data-v-a11c5244="">—</strong>
-                            </div><!----><!----><span class="v-card__underlay"></span>
-                          </div>
-                          <div data-v-a11c5244=""
-                            class="v-card v-theme--light v-card--density-default v-card--variant-elevated pa-3 elevation-1 hoverable-card">
-                            <!---->
-                            <div class="v-card__loader">
-                              <div class="v-progress-linear v-theme--light v-locale--is-ltr" role="progressbar"
-                                aria-hidden="true" aria-valuemin="0" aria-valuemax="100"
-                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px;"><!---->
-                                <div class="v-progress-linear__background"></div>
-                                <div class="v-progress-linear__buffer" style="width: 0%;"></div>
-                                <div class="v-progress-linear__indeterminate">
-                                  <div class="v-progress-linear__indeterminate long"></div>
-                                  <div class="v-progress-linear__indeterminate short"></div>
-                                </div><!---->
-                              </div>
-                            </div><!----><!---->
-                            <div data-v-a11c5244="" class="text-subtitle-1 font-weight-bold">UN30-Social Issues</div>
-                            <div data-v-a11c5244="" class="text-caption"> Credit Hours: 2</div>
-                            <div data-v-a11c5244="" class="text-caption"> Marks: 50 / 50</div>
-                            <div data-v-a11c5244="" class="text-caption"> Points: —</div>
-                            <div data-v-a11c5244="" class="text-caption"> Grade: <strong data-v-a11c5244="">P</strong>
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Comment: <strong data-v-a11c5244="">—</strong>
-                            </div><!----><!----><span class="v-card__underlay"></span>
-                          </div>
-                          <div data-v-a11c5244=""
-                            class="v-card v-theme--light v-card--density-default v-card--variant-elevated pa-3 elevation-1 hoverable-card">
-                            <!---->
-                            <div class="v-card__loader">
-                              <div class="v-progress-linear v-theme--light v-locale--is-ltr" role="progressbar"
-                                aria-hidden="true" aria-valuemin="0" aria-valuemax="100"
-                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px;"><!---->
-                                <div class="v-progress-linear__background"></div>
-                                <div class="v-progress-linear__buffer" style="width: 0%;"></div>
-                                <div class="v-progress-linear__indeterminate">
-                                  <div class="v-progress-linear__indeterminate long"></div>
-                                  <div class="v-progress-linear__indeterminate short"></div>
-                                </div><!---->
-                              </div>
-                            </div><!----><!---->
-                            <div data-v-a11c5244="" class="text-subtitle-1 font-weight-bold">THS117-General physiology
-                              for technologists</div>
-                            <div data-v-a11c5244="" class="text-caption"> Credit Hours: 2</div>
-                            <div data-v-a11c5244="" class="text-caption"> Marks: 69.50 / 100</div>
-                            <div data-v-a11c5244="" class="text-caption"> Points: 5.20</div>
-                            <div data-v-a11c5244="" class="text-caption"> Grade: <strong data-v-a11c5244="">C</strong>
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Comment: <strong data-v-a11c5244="">—</strong>
-                            </div><!----><!----><span class="v-card__underlay"></span>
-                          </div>
+                          <!---->
                         </div>
                       </div>
                       <div data-v-a11c5244="" class="mb-8">
-                        <h3 data-v-a11c5244="" class="text-h6 mb-2">2023 - FALL</h3>
-                        <div data-v-a11c5244="" class="d-flex flex-column gap-2">
-                          <div data-v-a11c5244=""
-                            class="v-card v-theme--light v-card--density-default v-card--variant-elevated pa-3 elevation-1 hoverable-card">
-                            <!---->
-                            <div class="v-card__loader">
-                              <div class="v-progress-linear v-theme--light v-locale--is-ltr" role="progressbar"
-                                aria-hidden="true" aria-valuemin="0" aria-valuemax="100"
-                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px;"><!---->
-                                <div class="v-progress-linear__background"></div>
-                                <div class="v-progress-linear__buffer" style="width: 0%;"></div>
-                                <div class="v-progress-linear__indeterminate">
-                                  <div class="v-progress-linear__indeterminate long"></div>
-                                  <div class="v-progress-linear__indeterminate short"></div>
-                                </div><!---->
-                              </div>
-                            </div><!----><!---->
-                            <div data-v-a11c5244="" class="text-subtitle-1 font-weight-bold">THS101-Basic physics</div>
-                            <div data-v-a11c5244="" class="text-caption"> Credit Hours: 2</div>
-                            <div data-v-a11c5244="" class="text-caption"> Marks: 67 / 100</div>
-                            <div data-v-a11c5244="" class="text-caption"> Points: 4.80</div>
-                            <div data-v-a11c5244="" class="text-caption"> Grade: <strong data-v-a11c5244="">C-</strong>
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Comment: <strong data-v-a11c5244="">—</strong>
-                            </div><!----><!----><span class="v-card__underlay"></span>
+                        <h3 data-v-a11c5244="" class="text-h6 mb-2">
+                          2023 - FALL
+                        </h3>
+                        <div data-v-a11c5244="" class="v-table v-theme--light v-table--density-default">
+                          <!---->
+                          <div class="v-table__wrapper">
+                            <table>
+                              <thead data-v-a11c5244="">
+                                <tr data-v-a11c5244="">
+                                  <th data-v-a11c5244="">Subject</th>
+                                  <th data-v-a11c5244="">Credit Hours</th>
+                                  <th data-v-a11c5244="">Marks</th>
+                                  <th data-v-a11c5244="">Points</th>
+                                  <th data-v-a11c5244="">Grade</th>
+                                  <th data-v-a11c5244="">Comment</th>
+                                </tr>
+                              </thead>
+                              <tbody data-v-a11c5244="">
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    THS101-Basic physics
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">67 / 100</td>
+                                  <td data-v-a11c5244="">4.80</td>
+                                  <td data-v-a11c5244="">C-</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    THS102-Mathematics
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">78 / 100</td>
+                                  <td data-v-a11c5244="">6.40</td>
+                                  <td data-v-a11c5244="">B</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    THS103-Introduction to electrical
+                                    engineering
+                                  </td>
+                                  <td data-v-a11c5244="">3</td>
+                                  <td data-v-a11c5244="">108 / 150</td>
+                                  <td data-v-a11c5244="">7.80</td>
+                                  <td data-v-a11c5244="">C</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">THS104-Mechanics</td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">75 / 100</td>
+                                  <td data-v-a11c5244="">6</td>
+                                  <td data-v-a11c5244="">B-</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    UN101-Academic reading &amp; writing (1)
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">52 / 100</td>
+                                  <td data-v-a11c5244="">4</td>
+                                  <td data-v-a11c5244="">D</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    UN102-Computer skills
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">67 / 100</td>
+                                  <td data-v-a11c5244="">4.80</td>
+                                  <td data-v-a11c5244="">C-</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                                <tr data-v-a11c5244="">
+                                  <td data-v-a11c5244="">
+                                    UN103-Critical thinking
+                                  </td>
+                                  <td data-v-a11c5244="">2</td>
+                                  <td data-v-a11c5244="">46.50 / 100</td>
+                                  <td data-v-a11c5244="">—</td>
+                                  <td data-v-a11c5244="">F</td>
+                                  <td data-v-a11c5244="">—</td>
+                                </tr>
+                              </tbody>
+                            </table>
                           </div>
-                          <div data-v-a11c5244=""
-                            class="v-card v-theme--light v-card--density-default v-card--variant-elevated pa-3 elevation-1 hoverable-card">
-                            <!---->
-                            <div class="v-card__loader">
-                              <div class="v-progress-linear v-theme--light v-locale--is-ltr" role="progressbar"
-                                aria-hidden="true" aria-valuemin="0" aria-valuemax="100"
-                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px;"><!---->
-                                <div class="v-progress-linear__background"></div>
-                                <div class="v-progress-linear__buffer" style="width: 0%;"></div>
-                                <div class="v-progress-linear__indeterminate">
-                                  <div class="v-progress-linear__indeterminate long"></div>
-                                  <div class="v-progress-linear__indeterminate short"></div>
-                                </div><!---->
-                              </div>
-                            </div><!----><!---->
-                            <div data-v-a11c5244="" class="text-subtitle-1 font-weight-bold">THS102-Mathematics</div>
-                            <div data-v-a11c5244="" class="text-caption"> Credit Hours: 2</div>
-                            <div data-v-a11c5244="" class="text-caption"> Marks: 78 / 100</div>
-                            <div data-v-a11c5244="" class="text-caption"> Points: 6.40</div>
-                            <div data-v-a11c5244="" class="text-caption"> Grade: <strong data-v-a11c5244="">B</strong>
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Comment: <strong data-v-a11c5244="">—</strong>
-                            </div><!----><!----><span class="v-card__underlay"></span>
-                          </div>
-                          <div data-v-a11c5244=""
-                            class="v-card v-theme--light v-card--density-default v-card--variant-elevated pa-3 elevation-1 hoverable-card">
-                            <!---->
-                            <div class="v-card__loader">
-                              <div class="v-progress-linear v-theme--light v-locale--is-ltr" role="progressbar"
-                                aria-hidden="true" aria-valuemin="0" aria-valuemax="100"
-                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px;"><!---->
-                                <div class="v-progress-linear__background"></div>
-                                <div class="v-progress-linear__buffer" style="width: 0%;"></div>
-                                <div class="v-progress-linear__indeterminate">
-                                  <div class="v-progress-linear__indeterminate long"></div>
-                                  <div class="v-progress-linear__indeterminate short"></div>
-                                </div><!---->
-                              </div>
-                            </div><!----><!---->
-                            <div data-v-a11c5244="" class="text-subtitle-1 font-weight-bold">THS103-Introduction to
-                              electrical engineering</div>
-                            <div data-v-a11c5244="" class="text-caption"> Credit Hours: 3</div>
-                            <div data-v-a11c5244="" class="text-caption"> Marks: 108 / 150</div>
-                            <div data-v-a11c5244="" class="text-caption"> Points: 7.80</div>
-                            <div data-v-a11c5244="" class="text-caption"> Grade: <strong data-v-a11c5244="">C</strong>
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Comment: <strong data-v-a11c5244="">—</strong>
-                            </div><!----><!----><span class="v-card__underlay"></span>
-                          </div>
-                          <div data-v-a11c5244=""
-                            class="v-card v-theme--light v-card--density-default v-card--variant-elevated pa-3 elevation-1 hoverable-card">
-                            <!---->
-                            <div class="v-card__loader">
-                              <div class="v-progress-linear v-theme--light v-locale--is-ltr" role="progressbar"
-                                aria-hidden="true" aria-valuemin="0" aria-valuemax="100"
-                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px;"><!---->
-                                <div class="v-progress-linear__background"></div>
-                                <div class="v-progress-linear__buffer" style="width: 0%;"></div>
-                                <div class="v-progress-linear__indeterminate">
-                                  <div class="v-progress-linear__indeterminate long"></div>
-                                  <div class="v-progress-linear__indeterminate short"></div>
-                                </div><!---->
-                              </div>
-                            </div><!----><!---->
-                            <div data-v-a11c5244="" class="text-subtitle-1 font-weight-bold">THS104-Mechanics</div>
-                            <div data-v-a11c5244="" class="text-caption"> Credit Hours: 2</div>
-                            <div data-v-a11c5244="" class="text-caption"> Marks: 75 / 100</div>
-                            <div data-v-a11c5244="" class="text-caption"> Points: 6</div>
-                            <div data-v-a11c5244="" class="text-caption"> Grade: <strong data-v-a11c5244="">B-</strong>
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Comment: <strong data-v-a11c5244="">—</strong>
-                            </div><!----><!----><span class="v-card__underlay"></span>
-                          </div>
-                          <div data-v-a11c5244=""
-                            class="v-card v-theme--light v-card--density-default v-card--variant-elevated pa-3 elevation-1 hoverable-card">
-                            <!---->
-                            <div class="v-card__loader">
-                              <div class="v-progress-linear v-theme--light v-locale--is-ltr" role="progressbar"
-                                aria-hidden="true" aria-valuemin="0" aria-valuemax="100"
-                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px;"><!---->
-                                <div class="v-progress-linear__background"></div>
-                                <div class="v-progress-linear__buffer" style="width: 0%;"></div>
-                                <div class="v-progress-linear__indeterminate">
-                                  <div class="v-progress-linear__indeterminate long"></div>
-                                  <div class="v-progress-linear__indeterminate short"></div>
-                                </div><!---->
-                              </div>
-                            </div><!----><!---->
-                            <div data-v-a11c5244="" class="text-subtitle-1 font-weight-bold">UN101-Academic reading
-                              &amp; writing (1)</div>
-                            <div data-v-a11c5244="" class="text-caption"> Credit Hours: 2</div>
-                            <div data-v-a11c5244="" class="text-caption"> Marks: 52 / 100</div>
-                            <div data-v-a11c5244="" class="text-caption"> Points: 4</div>
-                            <div data-v-a11c5244="" class="text-caption"> Grade: <strong data-v-a11c5244="">D</strong>
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Comment: <strong data-v-a11c5244="">—</strong>
-                            </div><!----><!----><span class="v-card__underlay"></span>
-                          </div>
-                          <div data-v-a11c5244=""
-                            class="v-card v-theme--light v-card--density-default v-card--variant-elevated pa-3 elevation-1 hoverable-card">
-                            <!---->
-                            <div class="v-card__loader">
-                              <div class="v-progress-linear v-theme--light v-locale--is-ltr" role="progressbar"
-                                aria-hidden="true" aria-valuemin="0" aria-valuemax="100"
-                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px;"><!---->
-                                <div class="v-progress-linear__background"></div>
-                                <div class="v-progress-linear__buffer" style="width: 0%;"></div>
-                                <div class="v-progress-linear__indeterminate">
-                                  <div class="v-progress-linear__indeterminate long"></div>
-                                  <div class="v-progress-linear__indeterminate short"></div>
-                                </div><!---->
-                              </div>
-                            </div><!----><!---->
-                            <div data-v-a11c5244="" class="text-subtitle-1 font-weight-bold">UN102-Computer skills</div>
-                            <div data-v-a11c5244="" class="text-caption"> Credit Hours: 2</div>
-                            <div data-v-a11c5244="" class="text-caption"> Marks: 67 / 100</div>
-                            <div data-v-a11c5244="" class="text-caption"> Points: 4.80</div>
-                            <div data-v-a11c5244="" class="text-caption"> Grade: <strong data-v-a11c5244="">C-</strong>
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Comment: <strong data-v-a11c5244="">—</strong>
-                            </div><!----><!----><span class="v-card__underlay"></span>
-                          </div>
-                          <div data-v-a11c5244=""
-                            class="v-card v-theme--light v-card--density-default v-card--variant-elevated pa-3 elevation-1 hoverable-card">
-                            <!---->
-                            <div class="v-card__loader">
-                              <div class="v-progress-linear v-theme--light v-locale--is-ltr" role="progressbar"
-                                aria-hidden="true" aria-valuemin="0" aria-valuemax="100"
-                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px;"><!---->
-                                <div class="v-progress-linear__background"></div>
-                                <div class="v-progress-linear__buffer" style="width: 0%;"></div>
-                                <div class="v-progress-linear__indeterminate">
-                                  <div class="v-progress-linear__indeterminate long"></div>
-                                  <div class="v-progress-linear__indeterminate short"></div>
-                                </div><!---->
-                              </div>
-                            </div><!----><!---->
-                            <div data-v-a11c5244="" class="text-subtitle-1 font-weight-bold">UN103-Critical thinking
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Credit Hours: 2</div>
-                            <div data-v-a11c5244="" class="text-caption"> Marks: 46.50 / 100</div>
-                            <div data-v-a11c5244="" class="text-caption"> Points: —</div>
-                            <div data-v-a11c5244="" class="text-caption"> Grade: <strong data-v-a11c5244="">F</strong>
-                            </div>
-                            <div data-v-a11c5244="" class="text-caption"> Comment: <strong data-v-a11c5244="">—</strong>
-                            </div><!----><!----><span class="v-card__underlay"></span>
-                          </div>
+                          <!---->
                         </div>
                       </div>
                     </div>
@@ -1205,41 +898,53 @@
                 </div>
               </div>
             </main>
-            <main id="payments-section" data-v-7a96a3fc="" class="v-main"
-              style="display:none; --v-layout-left: 0px; --v-layout-right: 0px; --v-layout-top: 64px; --v-layout-bottom: 0px;">
+            <main id="payments-section" data-v-7a96a3fc="" class="v-main" style="
+                  display: none;
+                  --v-layout-left: 0px;
+                  --v-layout-right: 0px;
+                  --v-layout-top: 64px;
+                  --v-layout-bottom: 0px;
+                ">
               <div data-v-7a96a3fc="" class="v-container v-locale--is-ltr">
                 <div data-v-7a96a3fc="" class="p-4 max-w-3xl mx-auto">
                   <h2 class="text-xl font-bold mb-4">💸 Student Fees</h2>
                   <div>
                     <div class="mb-6">
-                      <h3 class="text-lg font-semibold mb-2">📌 Outstanding Fees</h3>
+                      <h3 class="text-lg font-semibold mb-2">
+                        📌 Outstanding Fees
+                      </h3>
                       <div>
-
                         <div class="border rounded-lg p-3 mb-2 flex justify-between items-center hover:bg-gray-50">
-                          <div><input type="checkbox" class="mr-2" value="56266"><span class="font-medium">مصاريف التيرم
-                              الثاني -2025 - الفرقة الثالثة</span></div>
+                          <div>
+                            <input type="checkbox" class="mr-2" value="56266" /><span class="font-medium">مصاريف التيرم
+                              الثاني -2025 - الفرقة
+                              الثالثة</span>
+                          </div>
                           <div>21000.00 EGP</div>
                         </div>
-
                       </div>
                     </div>
                     <div class="border-t pt-4 mt-4 text-right">
                       <p class="text-sm mb-1">Subtotal: 0.00 EGP</p>
-                      <p class="text-sm mb-1"> Bank Fees: 0.00 EGP </p>
-                      <p class="text-lg font-bold">Total: 0.00 EGP</p><button
-                        class="mt-4 bg-blue text-white px-4 py-2 rounded-lg hover:bg-green disabled:opacity-50"
-                        disabled=""> Proceed to Payment </button>
+                      <p class="text-sm mb-1">Bank Fees: 0.00 EGP</p>
+                      <p class="text-lg font-bold">Total: 0.00 EGP</p>
+                      <button class="mt-4 bg-blue text-white px-4 py-2 rounded-lg hover:bg-green disabled:opacity-50"
+                        disabled="">
+                        Proceed to Payment
+                      </button>
                     </div>
                     <div class="mb-6">
                       <h3 class="text-lg font-semibold mb-2">✅ Paid Fees</h3>
                       <div class="border rounded-lg p-3 mb-2 flex justify-between items-center hover:bg-gray-50">
-                        <div><span class="font-medium">مصاريف التيرم
-                            الأول - 2025 - الفرقة الثالثة</span></div>
+                        <div>
+                          <span class="font-medium">مصاريف التيرم الأول - 2025 - الفرقة الثالثة</span>
+                        </div>
                         <div>21000.00 EGP</div>
                       </div>
                       <div class="border rounded-lg p-3 mb-2 flex justify-between items-center hover:bg-gray-50">
-                        <div><span class="font-medium">الأنشطة
-                            الطلابية</span></div>
+                        <div>
+                          <span class="font-medium">الأنشطة الطلابية</span>
+                        </div>
                         <div>500.00 EGP</div>
                       </div>
                     </div>
